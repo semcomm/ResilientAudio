@@ -1,0 +1,381 @@
+<!--{% block title %}音频评分{% endblock %}-->
+<!--{% block content %}-->
+    <div class="contents">
+        <h1>Audio Samples for "SoundSpring: Loss-Resilient Audio Transceiver with Dual-Functional Masked Language Modeling"</h1>
+        <div class="ShowPictures">
+            <embed src="fig1.pdf" width="800px" height="500px" />
+            <div class="EmptyBetweenPictures"></div>
+            <embed src="fig9_dmr.pdf" width="800px" height="500px" />
+            <!--<div class="EmptyBetweenPictures"></div>
+            <embed src="fig9_dmr.pdf" width="800px" height="500px" />
+            <img src="./fig1a.jpg" width=300 height=300>
+            <div class="EmptyBetweenPictures"></div>
+            <img src="./fig1b.jpg" width=300 height=300>
+            <div class="EmptyBetweenPictures"></div>
+            <img src="./fig1c.jpg" width=300 height=300>-->
+        </div>
+
+
+        <!--<h2>Channel Bandwidth = 10KHz, SNR = -1dB, AWGN Channel</h2>-->
+        <div class="GroupNumber">
+            <div class="Empty"></div>
+            <div class="GroupNumberIndex"><h2>Audio 1</h2></div>
+            <div class="EmptyBetweenAudio"></div>
+            <div class="GroupNumberIndex"><h2>Audio 2</h2></div>
+            <div class="EmptyBetweenAudio"></div>
+            <div class="GroupNumberIndex"><h2>Audio 3</h2></div>
+            <div class="EmptyBetweenAudio"></div>
+            <div class="GroupNumberIndex"><h2>Audio 4</h2></div>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Original audio</h3></div>
+            <audio preload="auto" controls="controls" src="./N045.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundSpring + FEC </h3></div>
+            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">AMR-WB + FEC</h3></div>
+            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Opus 18 kbps + FEC</h3><h3>(Bandwidth = 12KHz)</h3></div>
+            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundStream + FEC</h3></div>
+            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+        </div>
+
+<!--{% endblock %}-->
+
+<!--{% block head %}-->
+    <!--{{ super() }}-->
+    <style>
+        .ShowPictures{
+            display: flex;
+        }
+        .EmptyBetweenPictures{
+            width: 450px;
+        }
+        .EmptyBetweenAudio{
+            width:150px;
+        }
+        .Empty{
+            width:206px ;
+        }
+        .GroupNumber{
+            display:flex;
+        }
+        .GroupNumberIndex{
+            width: 300px;
+            text-align: center;
+        }
+        .groupname{
+            width: 206px;
+        }
+        .ShowAudio{
+            width: auto;
+            margin: 30px auto;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+        .audiobackgroundblue{
+            background: aqua;
+        }
+        .ReferenceAudio{
+            width: 500px;
+            margin: 30px auto;
+            display: flex;
+            text-align: left;
+            align-items: left;
+        }
+        .RatingAudioBox{
+            width: 5000px;
+            text-align: left;
+            align-items: center;
+            display: flex;
+        }
+        .RatingBar{
+            position: relative;
+            width: 900px;
+            display: inline-block;
+        }
+        #range1{
+            position: absolute;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            background: #999;
+            height: 5px;
+            outline: none;
+            width: 500px;
+        }
+        input[type=range]::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: red;
+        }
+        .GreenRange1{
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 3px;
+            width: 0px;
+            height: 5px;
+            background: green;
+            top: 0px;
+            left: 0;
+        }
+        .RatingRange1{
+            position: absolute;
+            display: inline;
+            margin-top: 10px;
+        }
+        .RatingValue1{
+            display: inline-block;
+            font-size: 20px;
+            text-align: left;
+            width: 40px;
+        }
+        #range2{
+            position: absolute;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            background: #999;
+            height: 5px;
+            outline: none;
+            width: 500px;
+        }
+        .GreenRange2{
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 3px;
+            width: 0px;
+            height: 5px;
+            background: green;
+            top: 0px;
+            left: 0;
+        }
+        .RatingRange2{
+            position: absolute;
+            display: inline;
+            margin-top: 10px;
+        }
+        .RatingValue2{
+            display: inline-block;
+            font-size: 20px;
+            text-align: left;
+            width: 40px;
+        }
+        #range3{
+            position: absolute;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            background: #999;
+            height: 5px;
+            outline: none;
+            width: 500px;
+        }
+        .GreenRange3{
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 3px;
+            width: 0px;
+            height: 5px;
+            background: green;
+            top: 0px;
+            left: 0;
+        }
+        .RatingRange3{
+            position: absolute;
+            display: inline;
+            margin-top: 10px;
+        }
+        .RatingValue3{
+            display: inline-block;
+            font-size: 20px;
+            text-align: left;
+            width: 40px;
+        }
+        #range4{
+            position: absolute;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            background: #999;
+            height: 5px;
+            outline: none;
+            width: 500px;
+        }
+        .GreenRange4{
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 3px;
+            width: 0px;
+            height: 5px;
+            background: green;
+            top: 0px;
+            left: 0;
+        }
+        .RatingRange4{
+            position: absolute;
+            display: inline;
+            margin-top: 10px;
+        }
+        .RatingValue4{
+            display: inline-block;
+            font-size: 20px;
+            text-align: left;
+            width: 40px;
+        }
+        #range5{
+            position: absolute;
+            margin-top: 3px;
+            -webkit-appearance: none;
+            background: #999;
+            height: 5px;
+            outline: none;
+            width: 500px;
+        }
+        .GreenRange5{
+            position: absolute;
+            margin-left: 0px;
+            margin-top: 3px;
+            width: 0px;
+            height: 5px;
+            background: green;
+            top: 0px;
+            left: 0;
+        }
+        .RatingRange5{
+            position: absolute;
+            display: inline;
+            margin-top: 10px;
+        }
+        .RatingValue5{
+            display: inline-block;
+            font-size: 20px;
+            text-align: left;
+            width: 40px;
+        }
+
+
+        .pictureGroupBox {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .pictureBox {
+            height: auto;
+            width: 450px;
+            align-items: center;
+        }
+
+        .pictureBoxEmpty {
+            height: auto;
+            width: 25px;
+            align-items: center;
+        }
+
+        .pictureTag {
+            height: auto;
+            width: auto;
+            text-align: center;
+        }
+
+        .pictureItem {
+            height: auto !important;
+            width: 100%;
+        }
+
+        .submit-button {
+            width: 120px;
+            height: 48px;
+            background: #da9e3f;
+            border-radius: 0 6px 6px 0;
+            line-height: 48px;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .contents {
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        .contents .left {
+            width: 280px;
+        }
+
+        .contents .left .sidebar {
+            position: sticky;
+            width: 280px;
+            top: 130px;
+        }
+
+        .contents .left .sidebar .anchor {
+            width: 100%;
+            overflow: hidden;
+            background: hsla(0, 0%, 100%, .6);
+        }
+
+        .contents .left .sidebar .anchor .item {
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid hsla(0, 0%, 100%, .2);
+            text-align: center;
+            line-height: 60px;
+            color: #182435;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all .5s;
+        }
+    </style>
+<!--{% endblock head %}-->
+
+<!--{% block scripts %}-->
+    <!--{{ super() }}-->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var audioElement = document.createElement('audio');
+            {#  audioElement.setAttribute('src', 'E:/code/web/tklaudio/bluelog/static/audio/1/1.WAV.wav');#}
+            audioElement.setAttribute('src', 'http://www.soundjay.com/mechanical/camera-shutter-click-01.wav');
+            audioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+            audioElement.addEventListener("canplay",function(){
+                $("#length").text("Duration:" + audioElement.duration + " seconds");
+                $("#source").text("Source:" + audioElement.src);
+                $("#status").text("Status: Ready to play").css("color","green");
+            });
+            audioElement.addEventListener("timeupdate",function(){
+                $("#currentTime").text("Current second:" + audioElement.currentTime);
+            });
+            $('#play').click(function() {
+                audioElement.play();
+                $("#status").text("Status: Playing");
+            });
+            $('#pause').click(function() {
+                audioElement.pause();
+                $("#status").text("Status: Paused");
+            });
+            $('#restart').click(function() {
+                audioElement.currentTime = 0;
+            });
+        });
+    </script>
