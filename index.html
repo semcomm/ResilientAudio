@@ -3,51 +3,158 @@
     <div class="contents">
         <h1>Audio Samples for "SoundSpring: Loss-Resilient Audio Transceiver with Dual-Functional Masked Language Modeling"</h1>
         <div class="ShowPictures">
-            <img src="./fig1.png" width=500 height=300>
-            <div class="EmptyBetweenPictures"></div>
-            <img src="./fig9_dmr.png" width=500 height=300>
+            <img src="./fig1.png" width=800 height=300>
+        </div>
+        
+        <div style="border:1px solid #CCC "></div> 
+        <p margin="10px">
+            <h3 style="margin:10px;padding:0;line-height:20px">Neural audio codec:</h3>
+            <br/>
+            <b style="margin:10px;padding:0;">SoundStream:</b> Neural audio codec using residual vector quantization (RVQ) by Google Research.
+            <br/>
+            <b style="margin:10px;padding:0;"></b>N. Zeghidour, et.al ``Soundstream: An end-to-end neural audio codec,'' IEEE/ACM Trans. Audio Speech Language Process., vol. 30, pp. 495–507, 2021.
+            <br/>
+            <br/>
+            <h3 style="margin:10px;padding:0;line-height:20px">Traditional audio codec:</h3>
+            <br/>
+            <b style="margin:10px;padding:0;">AMR-WB:</b> B. Bessette, et.al ``The adaptive multirate wideband speech codec (AMR-WB),'' IEEE Trans. Speech Audio Process., 2002
+            <br/>
+            <b style="margin:10px;padding:0;">Opus:</b> Low bit-rate redundancy (LBRR) is available in 18 kbps.
+            <br/>
+            <b style="margin:10px;padding:0;"></b> J.-M. Valin, et.al, ``Definition of the Opus audio codec,'' IETF, 2012.
+            <br/>
+            <b style="margin:10px;padding:0;">AAC:</b> Advanced audio coding, ISO/IEC 13818-7:1997
+        </p>
+        
+        <h2 style="text-align: center;">Speech, 16 kHz Mono</h2>
+        <div class="GroupNumber">
+            <div class="GroupNumberIndex"><h2>10 % Random loss</h2></div>
+            <div class="EmptyBetweenAudio"></div>
+            <div class="GroupNumberIndex"><h2>30 % Random loss</h2></div>
+            <div class="EmptyBetweenAudio"></div>
+            <div class="GroupNumberIndex"><h2>WLAN Trace</h2></div>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Original</h3></div>
+            <audio preload="auto" controls="controls" src="./10/ref_Num016.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/ref_Num805.wav"></audio>
+            <div class="group2name"><h3 align="left">Original</h3></div>
+            <audio preload="auto" controls="controls" src="./30/ref_Num097.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/ref_Num734.wav"></audio>
+            <div class="group2name"><h3 align="left">Original</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/ref_Num012.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/ref_Num016.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">AMR-WB 9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_amrwb_9kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_amrwb_9kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">AMR-WB 9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_amrwb_9kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_amrwb_9kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">AMR-WB 9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_amrwb_9kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_amrwb_9kbps.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Opus @18kbps (LBRR)</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_opus_17.79.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_opus_17.79.wav"></audio>
+            <div class="group2name"><h3 align="left">Opus @18kbps (LBRR)</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_opus_17.79.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_opus_17.79.wav"></audio>
+            <div class="group2name"><h3 align="left">Opus @18kbps (LBRR)</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_opus_17.79.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_opus_17.79.wav"></audio>
+
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Opus @9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_opus_8.99.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_opus_8.99.wav"></audio>
+            <div class="group2name"><h3 align="left">Opus @9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_opus_8.99.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_opus_8.99.wav"></audio>
+            <div class="group2name"><h3 align="left">Opus @9kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_opus_8.99.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_opus_8.99.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundSpring + FEC @5.7kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_3kbps_fec01.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_3kbps_fec01.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundSpring + FEC @5.7kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_5.7kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_5.7kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundSpring + FEC @12kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_w_conceal.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_w_conceal.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundSpring @9.3kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_12kbps_nofec.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_12kbps_nofec.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundStream + FEC @12kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_12kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_12kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundStream + FEC @14.8kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_wo_conceal.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_wo_conceal.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundStream + FD-PLC @6kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./10/N016_FDPLC_6kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./10/N805_FDPLC_6kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundStream + FD-PLC @6kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./30/N097_FDPLC_6kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./30/N734_FDPLC_6kbps.wav"></audio>
+            <div class="group2name"><h3 align="left">SoundStream + FD-PLC @12kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N012_FDPLC_12kbps.wav"></audio>
+            <div class="EmptyBetweenAudio"></div>
+            <audio preload="auto" controls="controls" src="./WLAN/N016_FDPLC_12kbps.wav"></audio>
         </div>
 
-
-        <!--<h2>Channel Bandwidth = 10KHz, SNR = -1dB, AWGN Channel</h2>-->
+    <!-- 
+        <h2 style="text-align: center;">Music, 48 kHz Steoro</h2>
         <div class="GroupNumber">
-            <div class="Empty"></div>
-            <div class="GroupNumberIndex"><h2>Audio 1</h2></div>
+            <div class="GroupNumberIndex"><h2>10 % Random loss </h2></div>
             <div class="EmptyBetweenAudio"></div>
-            <div class="GroupNumberIndex"><h2>Audio 2</h2></div>
+            <div class="GroupNumberIndex"><h2>30 % Random loss</h2></div>
             <div class="EmptyBetweenAudio"></div>
-            <div class="GroupNumberIndex"><h2>Audio 3</h2></div>
-            <div class="EmptyBetweenAudio"></div>
-            <div class="GroupNumberIndex"><h2>Audio 4</h2></div>
+            <div class="GroupNumberIndex"><h2>WLAN Trace</h2></div>
         </div>
         <div class="ShowAudio">
             <div class="groupname"><h3 align="left">Original audio</h3></div>
-            <audio preload="auto" controls="controls" src="./N045.wav"></audio>
+            <audio preload="auto" controls="controls" src=""></audio>
             <div class="EmptyBetweenAudio"></div>
-            
-        </div>
-        <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">SoundSpring + FEC </h3></div>
-            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
+            <audio preload="auto" controls="controls" src=""></audio>
             <div class="EmptyBetweenAudio"></div>
-            
+            <audio preload="auto" controls="controls" src=""></audio>
         </div>
-        <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">SoundStream + FEC</h3></div>
-            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
-            <div class="EmptyBetweenAudio"></div>
-        </div>
-        <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">AMR-WB + FEC</h3></div>
-            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
-            <div class="EmptyBetweenAudio"></div>
-        </div>
-        <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">Opus 18 kbps + FEC</h3><h3>(LBRR)</h3></div>
-            <audio preload="auto" controls="controls" src="./N045_0000__sisnr9.80_sdr10.39_vis3.80.wav"></audio>
-            <div class="EmptyBetweenAudio"></div>
-        </div>
-        
+    --> 
+
+    <p align="center"> Demo page for paper review. </p>
+    <p align="center" style="width: 100%; align: center;color:#808080"> All rights reserved </p>
 
 <!--{% endblock %}-->
 
@@ -55,25 +162,34 @@
     <!--{{ super() }}-->
     <style>
         .ShowPictures{
-            display: flex;
+            text-align: center;
         }
         .EmptyBetweenPictures{
             width: 450px;
         }
         .EmptyBetweenAudio{
-            width:150px;
+            width:30px;
         }
         .Empty{
             width:206px ;
+        }
+        .Emptyshowaudio{
+            width:33.33% ;
         }
         .GroupNumber{
             display:flex;
         }
         .GroupNumberIndex{
-            width: 300px;
+            width: 33.33%;
             text-align: center;
         }
         .groupname{
+            margin-left:20px;
+            margin-right:20px;
+            width: 206px;
+        }
+        .group2name{
+            margin-left:20px;
             width: 206px;
         }
         .ShowAudio{
