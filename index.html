@@ -6,11 +6,11 @@
             <img src="./fig1.png" width=800 height=300>
         </div>
         
-        <div style="border:1px solid #CCC "></div> 
+        <div style="margin:20px;border:1px solid #CCC "></div> 
         <p margin="10px">
             <h3 style="margin:10px;padding:0;line-height:20px">Neural audio codec:</h3>
             <br/>
-            <b style="margin:10px;padding:0;">SoundStream:</b> Neural audio codec using residual vector quantization (RVQ) by Google Research.
+            <b style="margin:10px;padding:0;">SoundStream:</b> Neural audio codec using residual vector quantization (RVQ) by Google Research. The same audio encoder and decoder is employed in  for .
             <br/>
             <b style="margin:10px;padding:0;"></b>N. Zeghidour, et.al ``Soundstream: An end-to-end neural audio codec,'' IEEE/ACM Trans. Audio Speech Language Process., vol. 30, pp. 495–507, 2021.
             <br/>
@@ -25,7 +25,9 @@
             <br/>
             <b style="margin:10px;padding:0;">AAC:</b> Advanced audio coding, ISO/IEC 13818-7:1997
         </p>
-        
+
+        <div style="margin:30px; border:1px solid #CCC "></div> 
+
         <h2 style="text-align: center;">Speech, 16 kHz Mono</h2>
         <div class="GroupNumber">
             <div class="GroupNumberIndex"><h2>10 % Random loss</h2></div>
@@ -75,7 +77,6 @@
             <audio preload="auto" controls="controls" src="./WLAN/N012_opus_17.79.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./WLAN/N016_opus_17.79.wav"></audio>
-
         </div>
         <div class="ShowAudio">
             <div class="groupname"><h3 align="left">Opus @9kbps</h3></div>
@@ -92,25 +93,25 @@
             <audio preload="auto" controls="controls" src="./WLAN/N016_opus_8.99.wav"></audio>
         </div>
         <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">SoundSpring + FEC @5.7kbps</h3></div>
+            <div class="groupname"><h3 align="left" style="color: rgb(67, 101, 222);" >SoundSpring + FEC @5.7kbps</h3></div>
             <audio preload="auto" controls="controls" src="./10/N016_3kbps_fec01.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./10/N805_3kbps_fec01.wav"></audio>
-            <div class="group2name"><h3 align="left">SoundSpring + FEC @5.7kbps</h3></div>
+            <div class="group2name"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring + FEC @5.7kbps</h3></div>
             <audio preload="auto" controls="controls" src="./30/N097_5.7kbps.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./30/N734_5.7kbps.wav"></audio>
-            <div class="group2name"><h3 align="left">SoundSpring + FEC @12kbps</h3></div>
+            <div class="group2name"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring + FEC @12kbps</h3></div>
             <audio preload="auto" controls="controls" src="./WLAN/N012_w_conceal.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./WLAN/N016_w_conceal.wav"></audio>
         </div>
         <div class="ShowAudio">
-            <div class="groupname"><h3 align="left">SoundSpring @9.3kbps</h3></div>
+            <div class="groupname"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring @9.3kbps</h3></div>
             <audio preload="auto" controls="controls" src="./10/N016_12kbps_nofec.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./10/N805_12kbps_nofec.wav"></audio>
-            <div class="group2name"><h3 align="left">SoundSpring + FEC @12kbps</h3></div>
+            <div class="group2name"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring + FEC @12kbps</h3></div>
             <audio preload="auto" controls="controls" src="./30/N097_12kbps.wav"></audio>
             <div class="EmptyBetweenAudio"></div>
             <audio preload="auto" controls="controls" src="./30/N734_12kbps.wav"></audio>
@@ -134,9 +135,11 @@
             <audio preload="auto" controls="controls" src="./WLAN/N016_FDPLC_12kbps.wav"></audio>
         </div>
 
-    <!-- 
-        <h2 style="text-align: center;">Music, 48 kHz Steoro</h2>
+        <div style="margin:30px; border:1px solid #CCC "></div> 
+
+        <h2 style="text-align: center;">Music, 48 kHz Stereo</h2>
         <div class="GroupNumber">
+            <div class="Empty"></div>
             <div class="GroupNumberIndex"><h2>10 % Random loss </h2></div>
             <div class="EmptyBetweenAudio"></div>
             <div class="GroupNumberIndex"><h2>30 % Random loss</h2></div>
@@ -145,13 +148,89 @@
         </div>
         <div class="ShowAudio">
             <div class="groupname"><h3 align="left">Original audio</h3></div>
-            <audio preload="auto" controls="controls" src=""></audio>
-            <div class="EmptyBetweenAudio"></div>
-            <audio preload="auto" controls="controls" src=""></audio>
-            <div class="EmptyBetweenAudio"></div>
-            <audio preload="auto" controls="controls" src=""></audio>
+            <audio preload="auto" controls="controls" src="./music/N045_ref.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/N040_ref.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/N025_ref.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/N015_ref.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/N010_ref.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/N045_ref.wav"></audio>
         </div>
-    --> 
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">Opus @18kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./music/10/N045_opus_18.0.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/10/N040_opus_18.0.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N025_opus_18.0.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N015_opus_18.0.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N010_opus_18.0.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N045_opus_18.0.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">AAC @32kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./music/10/N045_AAC32kbps_10perc.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/10/N040_AAC32kbps_10perc.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N025_AAC32kbps_30perc.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N015_AAC32kbps_30perc.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N010_AAC32kbps.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N045_AAC32kbps.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring @9.2kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./music/10/N045_soundspring_9.2kbps_fec_na.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/10/N040_soundspring_9.2kbps_fec_na.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N025_soundspring_9.2kbps_fec_na.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N015_soundspring_9.2kbps_fec_na.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N010_soundspring_9.2kbps_fec_na.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N045_soundspring_9.2kbps_fec_na.wav"></audio>
+        </div>
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left" style="color: rgb(67, 101, 222);">SoundSpring + FEC @12.1kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./music/10/N045_soundspring_12.1kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/10/N040_soundspring_12.1kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N025_soundspring_12.1kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N015_soundspring_12.1kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N010_soundspring_12.1kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N045_soundspring_12.1kbps_fec.wav"></audio>
+        </div>
+
+        <div class="ShowAudio">
+            <div class="groupname"><h3 align="left">SoundStream + FEC @14.8kbps</h3></div>
+            <audio preload="auto" controls="controls" src="./music/10/N045_soundstream_14.8kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/10/N040_soundstream_14.8kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N025_soundstream_14.8kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/30/N015_soundstream_14.8kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N010_soundstream_14.8kbps_fec.wav"></audio>
+            <div class="EmptyBetweenMusic"></div>
+            <audio preload="auto" controls="controls" src="./music/wlan/N045_soundstream_14.8kbps_fec.wav"></audio>
+        </div>
 
     <p align="center"> Demo page for paper review. </p>
     <p align="center" style="width: 100%; align: center;color:#808080"> All rights reserved </p>
@@ -170,11 +249,11 @@
         .EmptyBetweenAudio{
             width:30px;
         }
-        .Empty{
-            width:206px ;
+        .EmptyBetweenMusic{
+            width:30px;
         }
-        .Emptyshowaudio{
-            width:33.33% ;
+        .Empty{
+            width:206px;
         }
         .GroupNumber{
             display:flex;
@@ -194,6 +273,13 @@
         }
         .ShowAudio{
             width: auto;
+            margin: 10px auto;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+        .ShowAudio2{
+            width: 33.33%;
             margin: 30px auto;
             display: flex;
             text-align: center;
@@ -486,6 +572,8 @@
             });
             $('#restart').click(function() {
                 audioElement.currentTime = 0;
-            });
+            }); 
         });
+
+ 
     </script>
