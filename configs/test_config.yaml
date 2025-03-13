@@ -1,0 +1,79 @@
+device_id: 7
+task: "test"
+save_log: True
+streaming: True
+
+lite_model: False
+lite_model_config:
+  "num_blocks": 6
+  "dim": 256
+
+model_path: "ckpt/SoundSpring-S_libri16k/base_d512_b12.ckpt" #12 layers, 512 dim # random bandwidth streaming 1.5, 3, 6, 12kbps
+lite_model_path: #indexed by 'num_blocks' 'dim'
+  3:
+      512: "ckpt/SoundSpring-S_libri16k/lite_d512_b3.ckpt"
+  6:
+      256: "ckpt/SoundSpring-S_libri16k/lite_d256_b6.ckpt"
+      512: "ckpt/SoundSpring-S_libri16k/lite_d256_b6.ckpt"
+  12:
+      256: "ckpt/SoundSpring-S_libri16k/lite_d256_b12.ckpt"
+
+eval_cfg:
+  "bandwidth": 6
+  "packet_loss": 0.1
+  "sim_mode": 'ratio'
+  "slices": 10
+  "num_stages_to_pred": 4
+  "context_mode": 'temporal_stride'
+  "fec": False
+  "fec_mode": '01'
+  "save": True
+  "compress": False
+  "vqlayer_bins": [1, 1, 2, 4, 8] #[base * lm_config["base_layer_n_q"] for base in [1 1 2 4 8]]
+
+stream_cfg:
+  "lookahead_frames": 2
+  "interval": 5
+  "max_context_frames": 15  # 50
+
+
+trace_path: 'none'  # 'none', 'wlan' or trace_path
+variable_bandwidth: False
+variable_cfg:
+  "bandwidth": [6, 6, 6, 6, 6]
+  "packet_loss": [0.05, 0.2, 0.1, 0.3, 0.1]
+  "fec": False
+  "fec_mode": ['01', '011', '01', '011', '01']
+  "trace_generator": None # path to trace
+
+# mfcc loss
+WINDOW_SIZE: 512
+
+model_config:
+  load: False  # load from pretrained audio codec
+  Encodec_Path: "ckpt/SoundSpring-S_libri16k/audio_codec.ckpt"   # soundstream checkpoint
+
+  n_filters: 32
+  causal: False
+  dimension: 128
+  quantizer_bins: 1024
+  target_bandwidths: [1.5, 3., 6., 12.]
+
+  rvq_base_entropy_H1: [8.3902002, 7.52553906, 7.4798615] # from pretrained audio codec
+
+# ========= dataset ==========
+BATCH_SIZE: 32
+dataset: LibriSpeech # LibriSpeech, aishe113
+dataset_cfg:
+  LibriSpeech:
+    datasetClass: AudioDataset4
+    max_duration_sec: None
+  aishe113:
+    datasetClass: AudioDataset4
+    max_duration_sec: None
+
+SAMPLE_RATE: 16000
+Resample_rate: 16000
+input_duration: 1000  # ms
+overlap_ratio: 0.1
+EXTRACT_MODE: 1
